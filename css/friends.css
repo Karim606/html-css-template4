@@ -1,0 +1,150 @@
+@import url(component.css);
+
+.friends {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap:20px;
+}
+
+
+.friends > div {
+
+    background-color: white;
+    padding:20px;
+    border-radius: 10px;
+    
+   
+}
+.friends > div .contact {
+
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+
+.friends > div .contact i{
+
+    background-color: #eee;
+    color:var(--grey-color);
+   width:30px;
+   height:30px;
+   border-radius: 50%;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.friends .details {
+
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.friends .details img {
+
+width:100px;
+height:100px;
+border-radius: 50%;
+
+
+}
+
+.friends .details h4 {
+
+    margin-bottom: 5px;
+    
+    
+    }
+
+    .friends .details h4 +span,.friends .act span {
+
+       color:var(--grey-color)
+        
+        
+        }
+    
+        .friends .inform   {
+
+           position: relative;
+            margin-bottom: 10px;
+          }   
+
+  .friends .inform > div  {
+
+    margin-bottom:10px;
+
+  }     
+
+  .friends .inform > div  i {
+
+    margin-right:5px;
+
+  } 
+
+
+ .friends .vip {
+
+position:absolute;
+top:50%;
+transform: translatey(-50%);
+right: 0;
+color:var(--orange-color);
+font-size:40px;
+opacity: .2;
+font-weight: bold;
+  }     
+
+.friends .act {
+
+    border-top: 1px solid #eee;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    padding:15px 0px
+}
+
+.friends .act .links a {
+
+   padding: 4px 10px;
+   color:white;
+   border-radius: 6px;
+}
+
+.friends .act .links a:first-of-type {
+
+  background-color: var(--blue-color);
+ }
+
+ .friends .act .links a:nth-of-type(2) {
+
+    background-color: var(--red-color);
+   }
+
+
+ @media (max-width: 767px) {
+    .friends {
+        grid-template-columns: minmax(200px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+  }
+
+  @media (max-width: 410px) {
+    
+    .friends .act, .friends .act span,.friends .act .links a {
+
+     display: block;
+  }
+  .friends .act span, .friends .act .links a {
+
+   margin-bottom: 10px;
+ }
+
+ .friends .act .links a {
+  width:fit-content;
+ }
+
+  }

@@ -1,0 +1,213 @@
+@import url(component.css);
+
+
+
+
+.files {
+
+display:flex;
+gap:20px
+
+}
+
+.c-grey {
+    color:var(--grey-color)
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+
+
+/*////////files-statistics//////////////////////*/
+
+
+.files-statistics {
+
+    background-color: white;
+      padding:20px;
+      min-width: 260px;
+      border-radius: 10px;
+     align-self: flex-start;
+       }
+     
+       
+
+.files-statistics > div {
+
+border: 1px solid #eee;
+border-radius: 6px;
+font-size:13px;
+margin-bottom: 15px;
+padding: 10px;
+align-items: center;
+display: flex;
+}
+
+
+
+
+.files-statistics > div span {
+
+   display: block;
+
+    }
+    
+    .files-statistics > div i {
+
+        margin-right:10px;
+        width:40px;        
+        height:40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+           }
+           
+    
+.files-statistics > div .size {
+
+  margin-left: auto;
+    
+     }
+     
+
+
+     .files-statistics > div:nth-of-type(1) i {
+
+      
+        background-color: rgb(0 117 255 / 20%);
+        color:var(--blue-color);
+       
+           }
+
+
+
+           .files-statistics > div:nth-of-type(2) i {
+
+      
+            background-color: rgb(34 197 94 / 20%);
+            color:var(--green-color);
+           
+               }
+    
+    
+               .files-statistics > div:nth-of-type(3) i {
+
+      
+                background-color: rgb(244 67 54 / 20%);
+                color:var(--red-color);
+               
+                   }
+
+
+                   .files-statistics > div:nth-of-type(4) i {
+
+      
+                    background-color: rgb(245 158 11 / 20%);
+                    color:var(--orange-color);
+                   
+                       }
+    
+
+ .files-statistics .upload  {
+    background-color: var(--blue-color);
+    color: white;
+    padding:5px 10px;
+    border-radius: 6px;
+    display: block;
+   margin:0px auto;
+   width:fit-content;
+ }
+
+ .files-statistics .upload i {
+    margin-right: 10px;
+    transition: .3s;
+ }
+
+  .files-statistics .upload:hover {
+    background-color: var(--blue-alt-color);
+}
+
+.files-statistics .upload:hover i {
+animation: go-up .8s linear infinite;
+ }
+
+
+
+/*files-cont////////////////*/
+
+.files-container  {
+
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-gap:10px;
+}
+
+
+.files-container .image {
+
+    width:64px;
+    height:64px;
+    transition: .3s;
+}
+
+.files-container .image:hover {
+
+    transform: rotate(5deg);
+}
+
+
+.files-container > div{
+
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+
+
+}
+
+
+.files-container > div{
+
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+
+
+}
+
+.files-container .file { 
+
+   text-align: center;
+    }
+    
+
+.files-container .date { 
+
+border-top: 1px solid #eee;
+padding:10px 0px;
+font-size:13px;
+display: flex;
+justify-content: space-between;
+color: var(--grey-color);
+}
+
+/*////////////media*/
+@media(max-width:767px) {
+
+.files {
+
+flex-direction: column;
+flex-direction: column-reverse;
+
+}
+
+.files .files-statistics{
+
+  align-self: normal;
+    min-width: auto;
+    }
+
+}

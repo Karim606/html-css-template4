@@ -1,0 +1,207 @@
+@import url(component.css);
+
+
+
+
+.projects {
+
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+grid-gap:20px;
+
+}
+
+.projects > div {
+
+   background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    }
+    
+    
+
+    .projects > div .date {
+
+       display: flex;
+       justify-content: space-between;
+
+    }
+
+
+    .c-grey{
+
+            color:var(--grey-color);
+        }
+
+
+        .mb-10{
+
+          margin-bottom:10px;
+        }
+    
+
+
+
+.projects .avatars .image {
+
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    border:2px solid white;
+}
+
+.projects .avatars a:not(:first-of-type) {
+
+   margin-left: -20px;
+}
+
+.projects .avatars a:hover {
+
+   position: relative;
+   z-index:1;
+ }
+ 
+
+ .projects > div .avatars {
+
+
+    padding: 50px 0px;
+    
+    
+            }
+
+    .projects .requirements  {
+
+        display: flex;
+         gap:10px;
+      justify-content: end;
+      padding: 10px;
+      border-top:1px solid #eee;
+      border-bottom:1px solid #eee;
+                }
+
+
+  .projects .requirements span {
+
+padding: 5px 5px;
+background-color: #eee;
+border-radius: 6px;
+
+}
+
+.projects .perf {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 0px
+}
+
+.projects .perf .bar {
+
+    background-color: #eee;
+    height:8px;
+    width:50%;
+    border-radius:6px;
+    overflow: hidden;
+}
+.projects .perf .bar div {
+
+   height: 8px;
+   border-radius: 6px;
+}
+
+/*//////////////end of component/////////////////////////*/
+
+
+.projects div:nth-of-type(1) .perf .bar div {
+
+    background-color: var(--red-color);
+   width:50%;
+  
+}
+
+.projects  div:nth-of-type(2) .perf .bar div{
+
+    background-color: var(--green-color);
+   width:80%;
+  
+}
+.projects  div:nth-of-type(3) .perf .bar div{
+
+    background-color: var(--blue-color);
+   width:100%;
+  
+}
+
+.projects  div:nth-of-type(4) .perf .bar div{
+
+    background-color: var(--green-color);
+   width:60%;
+  
+}
+
+
+.projects  div:nth-of-type(5) .perf .bar div{
+
+   background-color: var(--green-color);
+  width:70%;
+ 
+}
+
+
+.projects  div:nth-of-type(6) .perf .bar div{
+
+   background-color: var(--red-color);
+  width:40%;
+ 
+}
+
+.projects  div:nth-of-type(7) .perf .bar div,.projects  div:nth-of-type(8) .perf .bar div{
+
+   background-color: var(--green-color);
+  width:60%;
+ 
+}
+
+
+
+.projects  div:nth-of-type(9) .perf .bar div{
+
+   background-color: var(--green-color);
+  width:90%;
+ 
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+   .projects {
+       grid-template-columns: minmax(200px, 1fr);
+       gap: 10px;
+   }
+
+
+   .projects .requirements{
+      
+      flex-direction: column;
+  }
+
+  .projects .perf{
+      
+   flex-direction: column;
+
+}
+
+.projects .perf .bar{
+      
+  margin-bottom:10px;
+
+}
+
+
+
+}

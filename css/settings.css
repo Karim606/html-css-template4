@@ -1,0 +1,439 @@
+@import url(component.css);
+
+.settings {
+
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+    grid-gap:10px
+}
+
+.container .settings > div  {
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  .toggle-checkbox {
+
+    display: none;
+    appearance: none;
+
+  }
+
+  .toggle-switch {
+    background-color: #ccc;
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .toggle-checkbox:checked + .toggle-switch {
+    background-color: var(--blue-color);
+}
+
+  .toggle-switch::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    font-weight: 900;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    transition: 0.3s;
+  }
+
+  .toggle-checkbox:checked + .toggle-switch::before {
+    content: "\f00c";
+    left: 50px;
+    color: var(--blue-color);
+}
+
+.info p  {
+
+    margin-top: 5px;
+    font-size: 13px;
+    color: var(--grey-color);
+    
+    
+      }
+    
+/*///////////control//////////////////*/
+
+
+
+.control .close-message {
+
+width:100%;
+resize:none;
+min-height: 150px;
+border:1px solid #ccc;
+border-radius:6px;
+padding: 10px;
+
+  }
+
+
+.control .opt {
+
+display: flex;
+justify-content: space-between;
+margin-bottom: 25px;
+  }
+
+
+
+
+
+  .control .opt label {
+
+   align-self: center;
+    
+
+      }
+
+@media(max-width:550px){
+
+  .settings {
+
+    grid-template-columns: minmax(100px,1fr)
+
+}
+
+}
+/*///////////general//////////////////*/
+
+
+.general form {
+
+display: flex;
+flex-direction: column;    
+}
+
+.general form input {
+ padding: 10px;
+ border: 1px solid #ccc;
+
+    }
+
+    .general form input:not(:last-of-type) {
+
+        margin-bottom: 20px;
+
+           }
+
+
+    .general form label {
+       
+        margin-bottom: 10px;
+        color:var(--grey-color);
+        font-size:14px;
+           }
+
+
+           .general form div #email {
+
+            width:90%;
+            display: inline-flex;
+             }
+
+             
+.general form div #email {
+
+    width:90%;
+
+     }
+
+.general form .email  {
+
+   display: flex;
+justify-content: center;
+align-items: center;
+    }
+
+.general form div #email:disabled {
+
+    cursor: no-drop;
+    background-color: #f0f4f8;
+    color: #bbb
+    
+}
+    .general form div a {
+
+        color: var(--blue-color);
+        margin-left: 15px
+
+       
+         }
+
+/*security info////////////////////////////////*/
+
+.security .parent > div {
+
+
+display: flex;
+justify-content: space-between;
+margin-bottom: 25px;
+}
+.security .parent > div:not(:last-of-type) {
+
+
+   border-bottom: 1px solid #eee;
+    
+    }
+
+.security .parent  a {
+
+
+    padding: 5px 10px;
+    border-radius: 6px;
+    align-self: center;
+    }
+
+    .security .parent > div:nth-of-type(1) a {
+
+
+      background-color: var(--blue-color);
+        color: white;
+       
+        }
+
+        .security .parent > div:nth-of-type(3) a {
+
+            background-color: #eee;
+            color: black;
+              }
+
+/*//social///////////////////////////////////////////////////////////////*/
+.social form div input {
+
+    width:calc(100% - 40px);
+padding:10px;
+height: 40px;
+background-color: #f6f6f6;
+border: 1px solid #ddd;
+padding-left: 10px;
+border-radius: 0 6px 6px 0
+
+}
+
+.social form div  {
+
+    width:100%;
+    display:flex;
+    margin-bottom: 25px;
+    background-color: #eee
+}
+
+.social form div  i {
+    width: 40px;
+    height: 40px;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--grey-color);
+}
+
+.social form > div:focus-within i  {
+
+   color:black
+
+}
+
+
+/*///////////widgets-control////////////////*/
+
+
+.widgets-control form > div label {
+
+padding-left:40px;
+position: relative;
+cursor: pointer;
+}
+.widgets-control form > div  {
+
+ margin-bottom: 15px;
+  }
+
+.widgets-control form > div input[type="checkbox"] {
+
+  appearance: none;
+  }
+
+  
+.widgets-control form > div label::before {
+
+  content:"";
+ 
+width: 14px;
+height:14px;
+border:2px solid var(--grey-color);
+margin-bottom: 15px;
+  }
+
+  .widgets-control form > div label::before , .widgets-control form > div label::after{
+
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:0;
+    border-radius: 4px;
+    }
+
+    
+  .widgets-control form > div label::after {
+
+    content:"\f00c";
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;
+    width: 18px;
+    height:18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:-9px;
+    font-size: 12px;
+    background-color: var(--blue-color);
+    color: white;
+    transform:scale(0) rotate(360deg);
+    transition: .3s;
+    }
+  
+
+    .widgets-control form > div input:checked + label::after {
+
+      transform: scale(1);
+      }
+
+/*//////////backup-manager////////////////////////////////*/
+
+.backup form  .time label {
+
+  padding-left:40px;
+  position: relative;
+  cursor: pointer;
+  }
+  .backup form div  {
+  
+   margin-bottom: 25px;
+
+    }
+  
+    .backup form > div input[type="radio"] {
+  
+    appearance: none;
+    }
+  
+    
+    .backup form .time label::before {
+  
+    content:"";
+   
+  width: 20px;
+  height:20px;
+  border:2px solid var(--grey-color);
+ 
+    }
+  
+    .backup form  .time label::before , .backup form .time label::after{
+  
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      left:0;
+      border-radius: 50%;
+      }
+  
+      
+      .backup form  .time label::after {
+  
+      content:"";
+      width: 0;
+      height:0;
+      background-color: var(--blue-color);
+      transition: .3s;
+      left:4px
+      }
+    
+  
+      .backup form .time input:checked + label::after {
+  
+       width:15px;
+       height:15px;
+       background-color:var(--blue-color);
+
+        }
+
+        .backup form  .time input:checked + label::before {
+  
+          border-color: var(--blue-color);
+          
+           }
+
+
+/*servers////////*/
+
+.servers {
+  display: flex;
+
+}
+.servers > div {
+
+  width:calc((100% - 20px)/3);
+margin-left: 5px;
+text-align:center;
+border:1px solid var(--grey-color);
+border-radius: 6px;
+}
+
+.servers > div label {
+
+cursor:pointer;
+display: block;
+margin: 15px;
+}
+
+
+
+
+.servers input:checked + div {
+
+border-color: var(--blue-color);
+color: var(--blue-color);
+}
+
+
+@media (max-width:768px) {
+
+.servers {
+
+flex-direction: column;
+
+}
+
+.servers > div {
+
+  width:100%;
+margin-left: 0;
+
+}
+
+}
+
+

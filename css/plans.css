@@ -1,0 +1,148 @@
+@import url(component.css);
+
+
+.plans {
+
+display:grid;
+grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+grid-gap:20px;
+}
+
+
+.plans > div{
+
+background-color: white;
+padding:14px;
+
+
+
+    }
+
+
+    .plans > div .head{
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+     
+        
+            }
+
+            .plans > div .head h2{
+
+                margin:0px;
+        
+            }
+
+        .plans > div .head p{
+
+          margin-top: 5px;
+          font-size: 40px;
+            
+    }
+
+    .plans > div ul .feature {
+
+        display: flex;
+        padding:10px;
+        border-bottom: 1px solid #eee;
+          
+  }
+    
+  .plans > div ul .feature i:first-of-type {
+
+    margin-right: 5px;
+    align-self: center;
+      
+}
+
+.plans > div ul .feature i:nth-of-type(2) {
+   
+    color: var(--grey-color);
+      margin-left: auto;
+}
+
+.plans > div ul .feature i {
+    align-self: center;
+      
+}
+
+
+.plans > div ul .feature .yes {
+   
+    color: var(--green-color);
+      
+}
+
+.plans > div ul .feature .fa-xmark {
+   
+    color: var(--red-color);
+      
+}
+
+
+
+.plans > div .btn{
+
+padding:5px 10px;
+    border-radius: 6px;
+    color:white;
+        }
+
+
+/*///////////basic//////////////////*/
+
+.plans > div .head {
+
+border:3px solid white;
+color:white;
+padding-top:20px;
+}
+
+.plans .free .head {
+
+    background-color: var(--green-color);
+    outline:3px solid var(--green-color)
+    }
+
+
+.plans .basic .head {
+
+    background-color: var(--blue-color);
+    outline:3px solid var(--blue-color)
+    }
+
+
+    .plans .premium .head {
+
+        background-color: var(--orange-color);
+        outline:3px solid var(--orange-color)
+        }
+  
+        
+        .plans .free .btn{
+
+         background-color: var(--green-color);
+                
+              }
+    
+         .plans .basic .btn{
+
+         background-color: var(--blue-color);
+            
+         }
+
+
+         .plans .premium .current {
+
+           text-align: center;
+           color:var(--grey-color)
+            }
+
+
+            @media (max-width: 767px) {
+                .plans {
+                    grid-template-columns: minmax(200px, 1fr);
+                    gap: 10px;
+                }        
+            }
